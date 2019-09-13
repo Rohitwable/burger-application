@@ -5,7 +5,7 @@ export default function buildControls(props) {
     const control = [
         {label: 'Cheese', type: 'cheese'},
         {label: 'Bacon', type: 'bacon'},
-        {label: 'Meat', type: 'meet'},
+        {label: 'Meat', type: 'meat'},
         {label: 'Salad', type: 'salad'},
 
     ]
@@ -15,6 +15,8 @@ export default function buildControls(props) {
            key={ctrl.label} 
            label={ctrl.label}
            added={()=> props.ingredientAdded(ctrl.type)}
+           removed={()=>props.ingredientRemoved(ctrl.type)}
+           disabled={props.disabled[ctrl.type]}
            />))} 
         </div>
     )
