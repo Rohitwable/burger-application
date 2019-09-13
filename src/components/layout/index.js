@@ -1,5 +1,6 @@
 import React from 'react'
 import Aux from '../hoc/aux'
+import classes from './styles.css'
 const layout = (props) => {
     return (
         <Aux>
@@ -8,7 +9,7 @@ const layout = (props) => {
                 sidedrawer,
                 backdrop
             </div>
-            <main>
+            <main className={classes.content}>
                 {props.children}
             </main>
         </Aux>
